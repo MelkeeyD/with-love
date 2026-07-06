@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Неожиданное предложение 💫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Фон с частицами -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <div class="container">
+        <!-- Слайд 1: Вступление -->
+        <div class="slide active" id="slide1">
+            <div class="content">
+                <div class="emoji">💻</div>
+                <h1>Ты же знаешь, я программист...</h1>
+                <p class="subtitle">И решил сделать нечто неожиданное</p>
+                <button class="btn btn-primary" onclick="goToSlide(2)">
+                    Что же там? 🤔
+                </button>
+            </div>
+        </div>
+
+        <!-- Слайд 2: Комплименты -->
+        <div class="slide" id="slide2">
+            <div class="content">
+                <div class="emoji">💕</div>
+                <h2>Почему ты такая особенная?</h2>
+                <div class="compliment-box">
+                    <p class="compliment-text" id="complimentText">
+                        Твоя улыбка освещает мой день ✨
+                    </p>
+                </div>
+                <div class="compliment-controls">
+                    <button class="btn btn-secondary" id="prevCompliment">◀</button>
+                    <span class="counter" id="complimentCounter">1 / 10</span>
+                    <button class="btn btn-secondary" id="nextCompliment">▶</button>
+                </div>
+                <button class="btn btn-primary hidden" id="goToFinal">
+                    Продолжить ➜
+                </button>
+            </div>
+        </div>
+
+        <!-- Слайд 3: Финальное предложение -->
+        <div class="slide" id="slide3">
+            <div class="content final-content">
+                <div class="heart-container">
+                    <div class="heart-pulse"></div>
+                </div>
+                <h2 class="final-title">И вот что я хочу сказать...</h2>
+                <p class="final-text">
+                    Ты - самая удивительная девушка, которую я встречал<br>
+                    И я хочу, чтобы мы были вместе ❤️
+                </p>
+                <div class="proposal-box">
+                    <h3 class="proposal-question">
+                        Ты согласишься быть моей девушкой?
+                    </h3>
+                    <div class="proposal-buttons">
+                        <button class="btn btn-yes" onclick="acceptProposal()">
+                            ДА! ❤️
+                        </button>
+                    </div>
+                </div>
+                <div class="final-message hidden" id="finalMessage">
+                    <h2>🎉 Ты согласилась! 🎉</h2>
+                    <p class="celebration-text">
+                        Это лучший день в моей жизни!<br>
+                        Я обещаю делать тебя счастливой! 💕
+                    </p>
+                    <div class="fireworks">
+                        <span>🎆</span>
+                        <span>🎇</span>
+                        <span>✨</span>
+                        <span>💖</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "Нет" вне контейнера, чтобы бегать по всему экрану -->
+    <button class="btn btn-no floating-btn" id="noBtn">
+        Нет 😅
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
